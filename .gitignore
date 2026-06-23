@@ -1,0 +1,27 @@
+# See https://help.github.com/articles/ignoring-files/
+
+.DS_Store
+node_modules/
+.env
+.env.local
+.env*.local
+!.env.local.example
+
+# Next.js app (yoga-tracker/)
+yoga-tracker/node_modules/
+yoga-tracker/.next/
+yoga-tracker/.netlify/
+yoga-tracker/.vercel/
+yoga-tracker/.env.local
+yoga-tracker/*.tsbuildinfo
+
+# Editor
+.vscode/
+.cursor/
+
+# Presentation (local only — not published to GitHub)
+yoga-tracker/docs/
+
+# Python
+__pycache__/
+*.pyc

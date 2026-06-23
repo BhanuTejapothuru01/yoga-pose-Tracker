@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YogaTracker — Open the app</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 520px;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+        line-height: 1.6;
+        color: #1b4332;
+      }
+      code {
+        background: #f0f4f2;
+        padding: 0.15rem 0.4rem;
+        border-radius: 4px;
+      }
+      a {
+        color: #2d6a4f;
+        font-weight: 600;
+      }
+      .open-btn {
+        display: block;
+        margin: 1.5rem 0;
+        padding: 14px 24px;
+        background: #2d6a4f;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      .open-btn:hover {
+        background: #40916c;
+      }
+      .box {
+        margin-top: 1.5rem;
+        padding: 1rem 1.25rem;
+        border: 2px solid #2d6a4f33;
+        border-radius: 12px;
+        background: #f8faf9;
+      }
+      .warn {
+        color: #c1121f;
+        font-weight: 600;
+      }
+      #status {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YogaTracker</h1>
+    <p class="warn">
+      Wrong URL — you opened Live Server (<code>127.0.0.1:5500</code>). That is
+      not the app.
+    </p>
+    <p>
+      YogaTracker runs on <strong>Next.js</strong> at port
+      <strong>3000</strong>, not port 5500.
+    </p>
+
+    <a class="open-btn" href="http://localhost:3000">Open http://localhost:3000</a>
+
+    <p id="status">Checking if the dev server is running…</p>
+
+    <div class="box">
+      <p><strong>First time? Start the server:</strong></p>
+      <ol>
+        <li>Open Terminal in this folder</li>
+        <li>Run: <code>npm run dev</code></li>
+        <li>Click the green button above (or open localhost:3000 in Chrome)</li>
+      </ol>
+      <p>
+        <strong>Do not</strong> use “Go Live” / Live Server for this project.
+        Bookmark <code>localhost:3000</code> instead.
+      </p>
+    </div>
+
+    <script>
+      ;(async function () {
+        const status = document.getElementById('status')
+        try {
+          const controller = new AbortController()
+          const timer = setTimeout(function () {
+            controller.abort()
+          }, 800)
+          await fetch('http://localhost:3000', {
+            method: 'HEAD',
+            mode: 'no-cors',
+            signal: controller.signal,
+          })
+          clearTimeout(timer)
+          status.textContent = 'Dev server is running — opening app…'
+          window.location.replace('http://localhost:3000')
+        } catch {
+          status.innerHTML =
+            'Dev server is <strong>not running</strong>. Run <code>npm run dev</code> in Terminal, then click the green button.'
+        }
+      })()
+    </script>
+  </body>
+</html>

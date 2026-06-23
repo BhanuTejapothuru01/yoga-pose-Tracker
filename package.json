@@ -1,0 +1,13 @@
+{
+  "name": "yoga-pose-tracker-workspace",
+  "private": true,
+  "description": "YogaTracker — run npm scripts from repo root; app code is in yoga-tracker/",
+  "scripts": {
+    "install:app": "npm install --prefix yoga-tracker",
+    "dev": "npm run dev --prefix yoga-tracker",
+    "build": "npm run build --prefix yoga-tracker",
+    "start": "npm run start --prefix yoga-tracker",
+    "lint": "npm run lint --prefix yoga-tracker",
+    "setup:supabase": "npm run setup:supabase --prefix yoga-tracker"
+  }
+}
