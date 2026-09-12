@@ -1,7 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
-  "buildCommand": "npm run build --prefix yoga-tracker",
-  "outputDirectory": "yoga-tracker/.next",
-  "installCommand": "npm install --prefix yoga-tracker"
-}
