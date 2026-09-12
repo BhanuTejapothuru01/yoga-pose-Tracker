@@ -29,14 +29,14 @@ export function Navbar() {
 
   const title =
     Object.entries(pageTitles).find(([path]) => pathname.startsWith(path))?.[1] ??
-    'YogaTracker'
+    'FitTrack AI'
 
   const initials = user?.name
     ?.split(' ')
     .map((n) => n[0])
     .join('')
     .toUpperCase()
-    .slice(0, 2) ?? 'YT'
+    .slice(0, 2) ?? 'FT'
 
   return (
     <header className="sticky top-0 z-20 flex h-16 items-center justify-between border-b-2 border-primary/20 bg-white px-4 shadow-sm md:px-6">
@@ -54,7 +54,7 @@ export function Navbar() {
         </Sheet>
 
         <h1 className="text-lg font-extrabold tracking-tight text-text-brand md:text-2xl">
-          <span className="md:hidden font-extrabold text-primary">YogaTracker</span>
+          <span className="md:hidden font-extrabold text-primary">FitTrack AI</span>
           <span className="hidden md:inline">{title}</span>
         </h1>
       </div>

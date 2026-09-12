@@ -20,6 +20,25 @@ For database setup, also add `SUPABASE_DB_PASSWORD` and `SUPABASE_DB_HOST`, then
 npm run setup:supabase
 ```
 
+## Quick Start (Single Command)
+
+You can start both backend API endpoints and frontend with a single command:
+
+**macOS / Linux / Git Bash / WSL:**
+```bash
+chmod +x start.sh
+./start.sh
+```
+
+**Windows (Command Prompt / PowerShell):**
+```cmd
+start.bat
+```
+
+*(Note: `start.sh` can also be executed on Windows environments via Git Bash or WSL).*
+
+## Manual Setup
+
 Start the dev server:
 
 ```bash

@@ -35,12 +35,11 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen">
       <div className="hidden w-1/2 flex-col justify-between border-r-4 border-primary/30 bg-text-brand p-12 text-white lg:flex">
-        <div className="text-xl font-extrabold tracking-tight">YogaTracker</div>
+        <div className="text-xl font-extrabold tracking-tight">FitTrack AI</div>
         <div>
           <blockquote className="mb-6 text-2xl font-light leading-relaxed">
-            &ldquo;Yoga is the journey of the self, through the self, to the self.&rdquo;
+            &ldquo;Your AI-powered personal fitness coach.&rdquo;
           </blockquote>
-          <p className="text-white/60">— The Bhagavad Gita</p>
         </div>
         <div className="flex flex-col items-center gap-6">
           <svg viewBox="0 0 120 200" className="h-48 opacity-60" aria-hidden>
@@ -57,10 +56,10 @@ export default function LoginPage() {
       <div className="flex w-full flex-col justify-center bg-surface px-8 py-12 lg:w-1/2 lg:px-16">
         <div className="panel-card mx-auto w-full max-w-md p-8">
           <Link href="/" className="mb-8 block text-xl font-extrabold text-primary lg:hidden">
-            YogaTracker
+            FitTrack AI
           </Link>
           <h1 className="page-heading mb-2">Welcome back</h1>
-          <p className="mb-8 font-medium text-text-muted">Sign in to continue your practice</p>
+          <p className="mb-8 font-medium text-text-muted">Sign in to continue your workouts</p>
 
           {error && (
             <Alert variant="destructive" className="mb-6">
@@ -75,6 +74,7 @@ export default function LoginPage() {
                 id="email"
                 type="email"
                 placeholder="you@example.com"
+                defaultValue="demo@fittrack.ai"
                 className="mt-1.5"
                 {...register('email')}
               />
@@ -95,6 +95,7 @@ export default function LoginPage() {
                   id="password"
                   type={showPassword ? 'text' : 'password'}
                   placeholder="••••••••"
+                  defaultValue="password123"
                   {...register('password')}
                 />
                 <button
@@ -112,7 +113,7 @@ export default function LoginPage() {
             </div>
 
             <div className="flex items-center gap-2">
-              <Checkbox id="remember" />
+              <Checkbox id="remember" defaultChecked />
               <Label htmlFor="remember" className="text-sm font-normal">
                 Remember me
               </Label>
@@ -122,12 +123,27 @@ export default function LoginPage() {
               {loading && <Loader2 className="h-4 w-4 animate-spin" />}
               Sign In
             </button>
+
+            <button
+              type="button"
+              className="btn-secondary w-full border border-primary/30 text-primary hover:bg-primary/5"
+              disabled={loading}
+              onClick={() => signIn('demo@fittrack.ai', 'password123')}
+            >
+              🚀 Instant Demo Login
+            </button>
           </form>
 
           <div className="my-6 flex items-center gap-4">
             <div className="h-px flex-1 bg-border" />
             <span className="text-sm text-text-muted">or</span>
             <div className="h-px flex-1 bg-border" />
+          </div>
+
+          <div className="rounded-lg border border-primary/20 bg-primary/5 p-3 text-xs text-text-muted">
+            <p className="font-semibold text-primary">Dummy Credentials for Testing:</p>
+            <p className="mt-1"><span className="font-medium">Email:</span> demo@fittrack.ai</p>
+            <p><span className="font-medium">Password:</span> password123</p>
           </div>
 
           <p className="mt-6 text-center text-sm text-text-muted">

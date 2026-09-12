@@ -39,7 +39,7 @@ export default function SignupPage() {
   return (
     <div className="flex min-h-screen">
       <div className="hidden w-1/2 flex-col justify-between bg-primary p-12 text-white lg:flex">
-        <div className="text-xl font-bold">YogaTracker</div>
+        <div className="text-xl font-bold">FitTrack AI</div>
         <div>
           <h2 className="mb-4 text-3xl font-semibold">Create an account</h2>
           <p className="text-white/80">
@@ -51,7 +51,7 @@ export default function SignupPage() {
       <div className="flex w-full flex-col justify-center px-8 py-12 lg:w-1/2 lg:px-16">
         <div className="mx-auto w-full max-w-md">
           <Link href="/" className="mb-8 block text-xl font-bold text-primary lg:hidden">
-            YogaTracker
+            FitTrack AI
           </Link>
           <h1 className="mb-2 text-2xl font-extrabold text-text-brand">Create your account</h1>
           <p className="mb-2 font-medium text-text-muted">

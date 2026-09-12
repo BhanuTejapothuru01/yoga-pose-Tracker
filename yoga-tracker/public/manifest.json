@@ -1,7 +1,7 @@
 {
-  "name": "YogaTracker",
-  "short_name": "YogaTracker",
-  "description": "AI-powered yoga pose tracking with real-time feedback",
+  "name": "FitTrack AI",
+  "short_name": "FitTrack AI",
+  "description": "AI-powered fitness tracking with real-time pose detection and feedback",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F8FFFE",

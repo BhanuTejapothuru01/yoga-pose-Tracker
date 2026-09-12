@@ -11,7 +11,7 @@ export default function HomePage() {
       <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <Link href="/" className="text-lg font-bold text-primary">
-            YogaTracker
+            FitTrack AI
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-sm font-medium text-text-muted hover:text-text-brand">

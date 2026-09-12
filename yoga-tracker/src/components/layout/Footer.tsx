@@ -13,9 +13,9 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <div className="mb-2 text-xl font-extrabold tracking-tight">YogaTracker</div>
+            <div className="mb-2 text-xl font-extrabold tracking-tight">FitTrack AI</div>
             <p className="max-w-sm text-sm text-white/75">
-              Fitness and yoga tracking with a webcam. Built as a college project.
+              AI-powered fitness tracking with real-time pose detection, form analysis, rep counting, and personalized workouts.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/15 pt-6 text-center">
-          <p className="text-sm text-white/50">© 2026 YogaTracker</p>
+          <p className="text-sm text-white/50">© 2026 FitTrack AI</p>
         </div>
       </div>
     </footer>

@@ -9,14 +9,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'YogaTracker — AI-Powered Yoga Pose Tracking',
+  title: 'FitTrack AI | Your AI-Powered Personal Fitness Coach',
   description:
-    'Real-time pose detection, instant feedback, and progress tracking — your personal AI yoga coach.',
+    'AI-powered fitness tracking with real-time pose detection, form analysis, rep counting, and personalized workouts.',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'YogaTracker',
+    title: 'FitTrack AI',
   },
   formatDetection: {
     telephone: false,
